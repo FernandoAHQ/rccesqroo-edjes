@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Bridgers Brush";
+  src: url("/assets/fonts/BridgersBrush.eot");
+  src: local("/assets/fonts/Bridgers Brush"), local("BridgersBrush"),
+    url("/assets/fonts/BridgersBrush.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/BridgersBrush.woff2") format("woff2"),
+    url("/assets/fonts/BridgersBrush.woff") format("woff"),
+    url("/assets/fonts/BridgersBrush.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Qanelas Soft Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Qanelas Soft Regular"),
+    url("/assets/fonts/QanelasSoftRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Qanelas Soft Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Qanelas Soft Thin"),
+    url("/assets/fonts/QanelasSoftThin.woff") format("woff");
+}
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Qanelas Soft Regular";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/images/hero-bg.jpg");
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.content {
+  margin-top: 50vh;
+}
+
+.hero-divider {
+  background-color: #fff;
+  width: 100vw;
+  height: 15vh;
+  -webkit-clip-path: polygon(0 95%, 100% 0, 100% 100%, 0 100%);
+  overflow: visible;
+}
+
+.hero-elements {
+  width: 100%;
+  background-color: #fff;
+  margin-top: -2px;
+}
+
+.hero-title {
+  font-family: "Bridgers Brush", sans-serif;
+  font-size: clamp(2rem, 15vw + 3rem, 25rem);
+  color: #013567;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.8rem, 4vw + 1rem, 3rem);
+  color: #e6af2e;
+  letter-spacing: 5px;
+  display: block;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.time-unit {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.number {
+  display: block;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Qahiri", sans-serif;
+  letter-spacing: 4px;
+  color: #003366; /* Dark blue color */
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #003366; /* Dark blue color */
+  letter-spacing: 1px;
+}
+
+.colon {
+  font-family: "Qahiri", sans-serif;
+  position: relative;
+  top: -10px;
+  font-size: 48px;
+  color: #003366; /* Dark blue color */
+  margin: 0 5px;
+}
+
+#about {
+  background-color: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-divider {
+    height: 10vh;
+  }
+}
